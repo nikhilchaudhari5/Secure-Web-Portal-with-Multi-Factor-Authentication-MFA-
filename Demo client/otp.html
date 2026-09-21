@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/otp.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Email OTP Verification</title>
+</head>
+
+<body>
+
+    <header class="landing-nav">
+
+        <div class="brand">
+
+            <div class="brand_logo">
+                <svg width="22" height="22" viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <rect x="9" y="11" width="6" height="5" rx="1"></rect>
+                    <path d="M10 11V9a2 2 0 1 1 4 0v2"></path>
+                </svg>
+            </div>
+            <span class="brand-logo-text">
+                SecureAuth
+            </span>
+        </div>
+    </header>
+  <main class="otp-container">
+        <div class="otp-card">
+            <div class="otp-icon">
+                ✉
+            </div>
+            <h2>Two-Step Email Verification</h2>
+            <p class="otp-description">
+                We have sent a 6-digit verification code
+                to your registered email address.
+            </p>
+
+            <div class="email-display">
+                
+            </div>
+            <form class="otp-form">
+                <div class="otp-box-container">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes">
+                </div>
+
+                <button type="submit" class="submit-otp">
+                    Verify Code &amp; Sign In
+                </button>
+            </form>
+            <p class="resend-text">
+                Resend email code in <span>31s</span>
+            </p>
+            <div class="return-login">
+              return to login 
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

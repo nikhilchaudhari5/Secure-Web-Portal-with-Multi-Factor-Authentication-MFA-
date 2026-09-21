@@ -1,0 +1,68 @@
+.registration-page {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-data {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.form-data h2 {
+    margin-bottom: 10px;
+}
+
+.input-box {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    padding: 0 15px;
+    background: #111113;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: white;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: var(--blue-light);
+}
+
+.input-box::placeholder {
+    color: var(--text-muted);
+}
+
+.account-create {
+    color: white;
+    background: var(--blue-primary);
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.account-create:hover {
+    background-color: #1d4ed8;
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.login-link a {
+    color: var(--blue-light);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

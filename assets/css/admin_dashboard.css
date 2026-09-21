@@ -1,0 +1,174 @@
+.dashboard-layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    padding: 20px 15px;
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.sidebar-link {
+    display: block;
+    padding: 11px 12px;
+    border-radius: 7px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.sidebar-link:hover {
+    background: #111113;
+    color: white;
+}
+
+
+.sidebar-link.active {
+    background: #111113;
+    color: var(--blue-light);
+}
+
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+
+.demo-link {
+    color: var(--blue-light);
+}
+
+
+/* Main Dashboard */
+
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+}
+
+
+.dashboard-header {
+    margin-bottom: 25px;
+}
+
+
+.dashboard-header h1 {
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+
+.dashboard-header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+
+/* Cards */
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+.dashboard-card {
+    padding: 20px;
+    background: #111113;
+    border: 1px solid var(--border-subtle);
+    border-radius: 9px;
+}
+
+
+.card-title {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+
+.dashboard-card h2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+
+.dashboard-card p {
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* User Activity */
+
+.activity-section {
+    padding: 20px;
+    background: #111113;
+    border: 1px solid var(--border-subtle);
+    border-radius: 9px;
+}
+
+
+.activity-section h2 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+
+.section-description {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* Activity Table */
+
+.activity-table {
+    width: 100%;
+}
+
+
+.activity-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    gap: 15px;
+    padding: 14px 10px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 13px;
+}
+
+
+.activity-heading {
+    border-top: none;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+
+.status-success {
+    color: #4ade80;
+}
+
+
+.status-failed {
+    color: #f87171;
+}

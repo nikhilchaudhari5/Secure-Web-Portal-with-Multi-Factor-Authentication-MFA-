@@ -1,0 +1,147 @@
+.login-container {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* Login Card */
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 35px;
+
+    background: #111113;
+
+    border: 1px solid var(--border-subtle);
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+/* Super Admin Icon */
+
+.admin-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(220, 38, 38, 0.10);
+
+    border: 1px solid rgba(220, 38, 38, 0.30);
+
+    color: #f87171;
+}
+
+
+/* Heading */
+
+.login-card h2 {
+    color: var(--text-primary);
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Description */
+
+.login-description {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Inputs */
+
+.input-box {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 15px;
+
+    padding: 0 15px;
+
+    background: #09090b;
+
+    border: 1px solid var(--border-subtle);
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+.input-box:focus {
+    outline: none;
+
+    border-color: #f87171;
+
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.12);
+}
+
+
+.input-box::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* Login Button */
+
+.login-button {
+    width: 100%;
+    height: 45px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.login-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Security Message */
+
+.security-note {
+    margin-top: 20px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}

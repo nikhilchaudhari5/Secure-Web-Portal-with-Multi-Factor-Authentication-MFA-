@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Acme HR Enterprise Admin Dashboard</title>
+
+</head>
+
+<body>
+  <header class="landing-nav">
+
+    <div class="brand_logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <rect x="9" y="11" width="6" height="5" rx="1"></rect>
+        <path d="M10 11V9a2 2 0 1 1 4 0v2"></path>
+      </svg>
+    </div>
+    <div class="company-logo">
+
+    </div>
+    </div>
+    <span class="brand-logo-text">
+      SecureAuth
+    </span>
+    </div>
+  </header>
+  <div class="dashboard-layout">
+    <main class="dashboard-content">
+      <div class="dashboard-header">
+        <div>
+          <h1> Admin Dashboard</h1>
+        </div>
+      </div>
+      <section class="overview">
+        <div class="dashboard-card">
+          <span class="card-title">
+            Registered Organizations
+          </span>
+        </div>
+        <div class="dashboard-card">
+          <span class="card-title">
+            Total Enrolled Users Across all client company partitions
+          </span>
+          <h2>3</h2>
+          <p>
+            Registered users
+          </p>
+        </div>
+        <div class="dashboard-card">
+          <span class="card-title">
+            Active Sessions
+          </span>
+          <h2>1</h2>
+          <p>
+            Currently active
+          </p>
+        </div>
+        <div class="dashboard-card">
+          <span class="card-title">
+            Trigger Lockouts
+            Auto-locked at 3 failed attempts
+          </span>
+          <h2>1</h2>
+          <p>
+            Requires attention
+          </p>
+        </div>
+      </section>
+      <section class="activity-section">
+        <h2>User Activity</h2>
+        <p class="section-description">
+          Recent authentication activity from your organization.
+        </p>
+        <div class="activity-table">
+          <div class="activity-row activity-heading">
+            <span>User</span>
+            <span>Activity</span>
+            <span>Status</span>
+            <span>Time</span>
+          </div>
+          <div class="activity-row">
+            <span>user@example.com</span>
+            <span>Login with MFA</span>
+            <span class="status-success">
+              Successful
+            </span>
+            <span>10:32 AM</span>
+          </div>
+          <div class="activity-row">
+            <span>john@example.com</span>
+            <span>OTP Verification</span>
+            <span class="status-success">
+              Successful
+            </span>
+            <span>10:18 AM</span>
+          </div>
+          <div class="activity-row">
+            <span>admin@example.com</span>
+            <span>Failed Login</span>
+            <span class="status-failed">
+              Failed
+            </span>
+            <span>09:54 AM</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

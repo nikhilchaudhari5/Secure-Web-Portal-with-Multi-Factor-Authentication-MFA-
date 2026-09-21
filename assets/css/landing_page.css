@@ -1,0 +1,107 @@
+
+.landing-hero-section {
+    background: rgba(9, 9, 11, 0.8);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    padding: 100px 48px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.landing-hero-content {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.landing-hero-title {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.landing-hero-desc {
+    font-size: 18px;
+    color:#a1a1aa;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto 36px;
+}
+
+
+.landing-cta-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.feature{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 24px;
+}
+.cards {
+    background: #343478;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.landing-pricing-heroic-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 24px;
+}
+
+
+ .pricing-card {
+    background: #43403a;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+.tier-cost{
+      font-family: var(--font-mono);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.btn{
+      border-radius: 19px;
+    background:rgb(113 113 166 / 80%);
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+    height: 34px;
+    width: 250px;
+}
+
+.cards:hover,
+.pricing-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+

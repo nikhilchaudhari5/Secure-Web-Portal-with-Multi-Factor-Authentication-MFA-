@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acme HR Enterprise Admin Dashboard</title>
+
+</head>
+
+<body>
+    <header class="landing-nav">
+        <div class="brand">
+            <div class="brand_logo">
+                <div class="company-logo">
+                    AC
+                </div>
+            </div>
+            <span class="brand-logo-text">
+                Acme HR Enterprise
+            </span>
+        </div>
+    </header>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <a href="admin_dashboard.html" class="sidebar-link active">
+                    Dashboard
+                </a>
+                <a href="api_integration.html" class="sidebar-link">
+                    API & Integration
+                </a>
+            </nav>
+            
+        </aside>
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>
+                        Acme HR Enterprise
+                    </p>
+                </div>
+              </div>
+            <section class="overview">
+                <div class="dashboard-card">
+                    <span class="card-title">
+                        Subscription
+                    </span>
+                    <h2>Enterprise</h2>
+                    <p>
+                        $199 / month
+                    </p>
+                </div>
+                <div class="dashboard-card">
+                    <span class="card-title">
+                        Enrolled Users
+                    </span>
+                    <h2>3</h2>
+                    <p>
+                        Registered users
+                    </p>
+                </div>
+                <div class="dashboard-card">
+                    <span class="card-title">
+                        Active Sessions
+                    </span>
+                    <h2>1</h2>
+                    <p>
+                        Currently active
+                    </p>
+                </div>
+                <div class="dashboard-card">
+                    <span class="card-title">
+                        Security Alerts
+                    </span>
+                    <h2>1</h2>
+                    <p>
+                        Requires attention
+                    </p>
+                </div>
+            </section>
+            <section class="activity-section">
+                <h2>User Activity</h2>
+                <p class="section-description">
+                    Recent authentication activity from your organization.
+                </p>
+                <div class="activity-table">
+                    <div class="activity-row activity-heading">
+                        <span>User</span>
+                        <span>Activity</span>
+                        <span>Status</span>
+                        <span>Time</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>user@example.com</span>
+                        <span>Login with MFA</span>
+                        <span class="status-success">
+                            Successful
+                        </span>
+                        <span>10:32 AM</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>john@example.com</span>
+                        <span>OTP Verification</span>
+                        <span class="status-success">
+                            Successful
+                        </span>
+                        <span>10:18 AM</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>admin@example.com</span>
+                        <span>Failed Login</span>
+                        <span class="status-failed">
+                            Failed
+                        </span>
+                        <span>09:54 AM</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
