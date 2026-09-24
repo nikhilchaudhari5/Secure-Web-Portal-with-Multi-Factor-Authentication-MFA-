@@ -75,6 +75,17 @@ CREATE TABLE IF NOT EXISTS security_audit_logs (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 7. Email OTP Verifications (SMTP Multi-Factor Authentication Codes)
+CREATE TABLE IF NOT EXISTS otp_verifications (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    otp_code VARCHAR(10) NOT NULL,
+    expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    is_used BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_otp_email ON otp_verifications(email);
+
 -- 7. Indexes for High-Throughput CIAM Telemetry
 CREATE INDEX IF NOT EXISTS idx_companies_client_id ON companies(client_id);
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);

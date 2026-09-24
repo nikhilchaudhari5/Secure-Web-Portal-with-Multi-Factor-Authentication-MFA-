@@ -104,3 +104,10 @@
 .login-link a:hover {
     text-decoration: underline;
 }
+
+#displaymessage {
+    margin-top: 18px;
+    font-size: 14px;
+    min-height: 20px;
+    word-break: break-word;
+}

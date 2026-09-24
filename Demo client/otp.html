@@ -8,15 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Email OTP Verification</title>
+    <title>Email OTP Verification - SecureAuth</title>
 </head>
 
 <body>
 
     <header class="landing-nav">
-
-        <div class="brand">
-
+        <div class="brand" onclick="window.location.href='../landing_page.html'" style="cursor: pointer;">
             <div class="brand_logo">
                 <svg width="22" height="22" viewBox="0 0 24 24"
                     fill="none"
@@ -33,8 +31,13 @@
                 SecureAuth
             </span>
         </div>
+        <div class="header-buttons">
+            <button class="header-button" onclick="window.location.href='user_login.html'">Login</button>
+            <button class="header-button" onclick="window.location.href='../landing_page.html'">Home</button>
+        </div>
     </header>
-  <main class="otp-container">
+
+    <main class="otp-container">
         <div class="otp-card">
             <div class="otp-icon">
                 ✉
@@ -45,33 +48,37 @@
                 to your registered email address.
             </p>
 
-            <div class="email-display">
-                
+            <div class="email-display" id="user-email-display">
+                user@example.com
             </div>
-            <form class="otp-form">
+
+            <form class="otp-form" id="otp-form">
                 <div class="otp-box-container">
-                    <input type="text" maxlength="1" class="otp-boxes">
-                    <input type="text" maxlength="1" class="otp-boxes">
-                    <input type="text" maxlength="1" class="otp-boxes">
-                    <input type="text" maxlength="1" class="otp-boxes">
-                    <input type="text" maxlength="1" class="otp-boxes">
-                    <input type="text" maxlength="1" class="otp-boxes">
+                    <input type="text" maxlength="1" class="otp-boxes" autofocus inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-boxes" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-boxes" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-boxes" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-boxes" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-boxes" inputmode="numeric">
                 </div>
 
                 <button type="submit" class="submit-otp">
                     Verify Code &amp; Sign In
                 </button>
             </form>
+
+            <div id="displaymessage"></div>
+
             <p class="resend-text">
-                Resend email code in <span>31s</span>
+                Resend email code in <span id="countdown">60s</span>
             </p>
-            <div class="return-login">
-              return to login 
+            <div class="return-login" onclick="window.location.href='user_login.html'" style="cursor: pointer;">
+              Return to login 
             </div>
         </div>
-
     </main>
 
+    <script src="../assets/js/otp.js"></script>
 </body>
 
 </html>

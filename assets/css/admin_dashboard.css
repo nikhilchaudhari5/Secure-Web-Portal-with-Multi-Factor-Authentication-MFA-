@@ -124,6 +124,7 @@
     background: #111113;
     border: 1px solid var(--border-subtle);
     border-radius: 9px;
+    margin-bottom: 25px;
 }
 
 
@@ -149,11 +150,12 @@
 
 .activity-row {
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1.6fr 1.1fr 1fr 1.1fr 1.4fr;
     gap: 15px;
     padding: 14px 10px;
     border-top: 1px solid var(--border-subtle);
     font-size: 13px;
+    align-items: center;
 }
 
 
@@ -164,11 +166,20 @@
 }
 
 
+/* Simple Plain Text Status (No buttons, no pills) */
+
 .status-success {
     color: #4ade80;
+    font-weight: 500;
 }
 
 
 .status-failed {
     color: #f87171;
+    font-weight: 500;
+}
+
+.status-warning {
+    color: #fbbf24;
+    font-weight: 500;
 }

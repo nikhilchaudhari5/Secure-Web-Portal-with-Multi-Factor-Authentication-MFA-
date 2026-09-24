@@ -2,66 +2,66 @@
 <html lang="en">
 
 <head>
-
     <link rel="stylesheet" href="../../assets/css/common.css">
     <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Acme HR Enterprise Admin Dashboard</title>
-
 </head>
 
 <body>
     <header class="landing-nav">
         <div class="brand">
             <div class="brand_logo">
-                <div class="company-logo">
+                <div class="company-logo" id="company-avatar">
                     AC
                 </div>
             </div>
-            <span class="brand-logo-text">
+            <span class="brand-logo-text" id="company-brand-name">
                 Acme HR Enterprise
             </span>
+        </div>
+        <div class="header-buttons">
+            <button class="header-button" id="logout-btn">Log Out</button>
         </div>
     </header>
     <div class="dashboard-layout">
         <aside class="sidebar">
             <nav class="sidebar-menu">
-                <a href="admin_dashboard.html" class="sidebar-link active">
+                <a href="#dashboard" class="sidebar-link active" id="tab-dashboard">
                     Dashboard
                 </a>
-                <a href="api_integration.html" class="sidebar-link">
-                    API & Integration
+                <a href="#integration" class="sidebar-link" id="tab-integration">
+                    API &amp; Integration
                 </a>
             </nav>
-            
         </aside>
         <main class="dashboard-content">
             <div class="dashboard-header">
                 <div>
                     <h1>Dashboard</h1>
-                    <p>
+                    <p id="company-header-name">
                         Acme HR Enterprise
                     </p>
                 </div>
-              </div>
-            <section class="overview">
+            </div>
+
+            <!-- Overview Section -->
+            <section class="overview" id="overview-section">
                 <div class="dashboard-card">
                     <span class="card-title">
                         Subscription
                     </span>
-                    <h2>Enterprise</h2>
-                    <p>
-                        $199 / month
+                    <h2 id="sub-plan">Enterprise</h2>
+                    <p id="sub-price">
+                        Active Plan
                     </p>
                 </div>
                 <div class="dashboard-card">
                     <span class="card-title">
                         Enrolled Users
                     </span>
-                    <h2>3</h2>
+                    <h2 id="users-count">0</h2>
                     <p>
                         Registered users
                     </p>
@@ -70,7 +70,7 @@
                     <span class="card-title">
                         Active Sessions
                     </span>
-                    <h2>1</h2>
+                    <h2 id="sessions-count">0</h2>
                     <p>
                         Currently active
                     </p>
@@ -79,51 +79,56 @@
                     <span class="card-title">
                         Security Alerts
                     </span>
-                    <h2>1</h2>
+                    <h2 id="alerts-count">0</h2>
                     <p>
                         Requires attention
                     </p>
                 </div>
             </section>
-            <section class="activity-section">
+
+            <!-- API Credentials Section -->
+            <section class="activity-section" id="api-section" style="display: none;">
+                <h2>API &amp; Integration</h2>
+                <p class="section-description">
+                    Developer credentials for connecting SecureAuth MFA.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 15px; max-width: 600px;">
+                    <div>
+                        <span style="color: var(--text-secondary); font-size: 13px;">Client ID:</span>
+                        <input type="text" id="display-client-id" readonly class="input-box" style="margin-top: 5px; width: 100%; height: 42px; padding: 0 12px; background: #09090b; border: 1px solid var(--border-subtle); border-radius: 8px; color: white;" value="...">
+                    </div>
+                    <div>
+                        <span style="color: var(--text-secondary); font-size: 13px;">API Key:</span>
+                        <input type="text" id="display-api-key" readonly class="input-box" style="margin-top: 5px; width: 100%; height: 42px; padding: 0 12px; background: #09090b; border: 1px solid var(--border-subtle); border-radius: 8px; color: white;" value="...">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activity Section (Simple 6-Column Text) -->
+            <section class="activity-section" id="activity-section">
                 <h2>User Activity</h2>
                 <p class="section-description">
                     Recent authentication activity from your organization.
                 </p>
-                <div class="activity-table">
+                <div class="activity-table" id="activity-table">
                     <div class="activity-row activity-heading">
-                        <span>User</span>
-                        <span>Activity</span>
+                        <span>Event Action</span>
+                        <span>User Email</span>
+                        <span>Auth Method</span>
                         <span>Status</span>
-                        <span>Time</span>
+                        <span>IP Address</span>
+                        <span>Timestamp</span>
                     </div>
-                    <div class="activity-row">
-                        <span>user@example.com</span>
-                        <span>Login with MFA</span>
-                        <span class="status-success">
-                            Successful
-                        </span>
-                        <span>10:32 AM</span>
-                    </div>
-                    <div class="activity-row">
-                        <span>john@example.com</span>
-                        <span>OTP Verification</span>
-                        <span class="status-success">
-                            Successful
-                        </span>
-                        <span>10:18 AM</span>
-                    </div>
-                    <div class="activity-row">
-                        <span>admin@example.com</span>
-                        <span>Failed Login</span>
-                        <span class="status-failed">
-                            Failed
-                        </span>
-                        <span>09:54 AM</span>
+                    <div id="activity-rows">
+                        <div class="activity-row">
+                            <span style="color: var(--text-muted);">Loading activity...</span>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <script src="../../assets/js/admin_dashboard.js"></script>
 </body>
 </html>

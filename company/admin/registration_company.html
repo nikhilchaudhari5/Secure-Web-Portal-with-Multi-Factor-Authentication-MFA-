@@ -6,12 +6,12 @@
 <link rel="stylesheet" href="../../assets/css/company_registration.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company registration </title>
+  <title>Company Registration - SecureAuth</title>
 </head>
 
 <body>
   <header class="landing-nav">
-    <div class="brand">
+    <div class="brand" onclick="window.location.href='../../landing_page.html'" style="cursor: pointer;">
       <div class="brand_logo">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -23,34 +23,37 @@
       <span class="brand-logo-text">SecureAuth</span>
     </div>
     <div class="header-buttons">
-      <button class="header-button"> Get started for free </button>
-      <button class="header-button"> company login </button>
+      <button class="header-button" onclick="window.location.href='registration_company.html'">Get started free</button>
+      <button class="header-button" onclick="window.location.href='admin_login.html'">Company Login</button>
+      <button class="header-button" onclick="window.location.href='../../landing_page.html'">Home</button>
     </div>
   </header>
   <form class="registration-page">
     <div class="form-data">
-      <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M3 21h18"></path>
-  <path d="M5 21V7l8-4v18"></path>
-  <path d="M19 21V11l-6-3"></path>
-  <path d="M9 9v.01"></path>
-  <path d="M9 12v.01"></path>
-  <path d="M9 15v.01"></path>
-  <path d="M9 18v.01"></path>
-</svg>
+      <svg xmlns="http://w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21h18"></path>
+        <path d="M5 21V7l8-4v18"></path>
+        <path d="M19 21V11l-6-3"></path>
+        <path d="M9 9v.01"></path>
+        <path d="M9 12v.01"></path>
+        <path d="M9 15v.01"></path>
+        <path d="M9 18v.01"></path>
+      </svg>
 
       <h2>Register Organization</h2>
-      <input type="text" name="company_name" class="input-box" placeholder="Company/Organization Name">
-      <input type="email" name="admin_email" class="input-box" placeholder="Company Admin Email">
-      <input type="password" name="password" class="input-box" placeholder="Admin password (Min 8 chars)">
-      <input type="password" name="confirm_password" class="input-box" placeholder="Confirm password">
+      <input type="text" name="company_name" id="company_name" class="input-box" placeholder="Company/Organization Name" required>
+      <input type="email" name="admin_email" id="admin_email" class="input-box" placeholder="Company Admin Email" autocomplete="email" required>
+      <input type="password" name="password" id="password" class="input-box" placeholder="Admin password (Min 8 chars)" autocomplete="new-password" required>
+      <input type="password" name="confirm_password" id="confirm_password" class="input-box" placeholder="Confirm password" autocomplete="new-password" required>
       <button type="submit" class="account-create">Create Account</button>
+      <div id="displaymessage"></div>
       <p class="login-link">
         Already have an account?
-        <a href="">Company Login</a>
+        <a href="admin_login.html">Company Login</a>
       </p>
     </div>
   </form>
+  <script src="../../assets/js/registration_company.js"></script>
 </body>
 
 </html>

@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <link rel="stylesheet" href="../assets/css/common.css">
 <link rel="stylesheet" href="../assets/css/demo_client_app.css">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Acme HR Enterprise</title>
+  <title>Acme HR Enterprise - Client Portal</title>
 </head>
-
 <body>
-
   <header class="landing-nav">
-
-    <div class="brand">
-
+    <div class="brand" onclick="window.location.href='../landing_page.html'" style="cursor: pointer;">
       <div class="brand_logo">
         <div class="company-logo">
           AC
         </div>
       </div>
-
       <span class="brand-logo-text">
         Acme HR Enterprise
       </span>
-
     </div>
-
+    <div class="header-buttons">
+      <button class="header-button" onclick="window.location.href='../landing_page.html'">Home</button>
+    </div>
   </header>
-
-
   <main class="auth-container">
-
-    <div class="auth-box">
-
+    <div class="auth-box" id="auth-box">
       <h2>Login with SecureAuth</h2>
-
-      <p>
+      <p id="auth-desc">
         Secure authentication for Acme HR Enterprise
       </p>
-
-      <button class="auth-button">
-        Login
-      </button>
-
-      <button class="auth-button register-button">
-        Register New User
-      </button>
-
+      <div id="auth-actions">
+        <button class="auth-button" onclick="window.location.href='user_login.html'">
+          Login
+        </button>
+        <button class="auth-button register-button" onclick="window.location.href='new_user_registration_page.html'">
+          Register New User
+        </button>
+      </div>
+      <div id="logged-in-box" style="display: none;">
+        <div style="background: rgba(74, 222, 128, 0.15); border: 1px solid rgba(74, 222, 128, 0.4); color: #4ade80; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+          ✓ MFA Session Active! You have successfully signed in.
+        </div>
+        <p id="welcome-user-text" style="color: var(--text-primary); font-size: 16px; margin-bottom: 20px;"></p>
+        <button class="auth-button" id="client-logout-btn">Sign Out</button>
+      </div>
     </div>
-
   </main>
 
-</body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let params = new URLSearchParams(window.location.search);
+      let isLoggedIn = params.get("logged_in") === "1" || sessionStorage.getItem("client_user");
 
+      if (isLoggedIn) {
+        let user = null;
+        try {
+          user = JSON.parse(sessionStorage.getItem("client_user"));
+        } catch(e) {}
+
+        document.getElementById("auth-actions").style.display = "none";
+        document.getElementById("logged-in-box").style.display = "block";
+        document.getElementById("auth-desc").textContent = "Employee Session Authenticated";
+
+        let userName = user ? (user.full_name || user.email) : "Test User";
+        document.getElementById("welcome-user-text").textContent = "Welcome, " + userName + " (" + (user ? user.email : "testuser@secureauth.com") + ")";
+
+        document.getElementById("client-logout-btn").addEventListener("click", function() {
+          sessionStorage.removeItem("client_user");
+          window.location.href = "demo_client_app.html";
+        });
+      }
+    });
+  </script>
+</body>
 </html>
